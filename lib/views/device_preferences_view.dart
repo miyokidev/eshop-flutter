@@ -9,37 +9,7 @@ class DevicePreferences extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: <Widget>[
-          new Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              new Expanded(
-                flex: 2,
-                child: new Container(
-                    child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text("eShop",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 64,
-                            color: Colors.white)),
-                    Text(
-                      "What's your preferences ? ",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                )),
-              ),
-              Expanded(
-                flex: 1,
-                child: OrientationDeviceOptions(),
-              ),
-            ],
-          ),
+          OrientationDeviceOptions(),
         ],
       ),
     );
