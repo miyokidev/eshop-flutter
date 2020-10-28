@@ -4,7 +4,6 @@ import 'package:flutter_eshop_app/controllers/preferences_orientation.dart';
 class DevicePreferences extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var deviceOrientation = MediaQuery.of(context).orientation;
     return Scaffold(
       backgroundColor: Colors.red,
       body: Stack(
@@ -25,8 +24,7 @@ class DevicePreferences extends StatelessWidget {
                             fontSize: 64,
                             color: Colors.white)),
                     Text(
-                      "What's your preferences ? " +
-                          deviceOrientation.toString(),
+                      "What's your preferences ? ",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -43,35 +41,6 @@ class DevicePreferences extends StatelessWidget {
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class Button extends StatelessWidget {
-  final String title;
-
-  Button(this.title);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 140,
-      height: 30,
-      child: RaisedButton(
-        onPressed: () {
-          print(title + " pressed");
-        },
-        color: Colors.redAccent[700],
-        highlightColor: Colors.red[900],
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-            side: BorderSide(color: Colors.red[900], width: 2)),
-        textColor: Colors.white,
-        child: Text(title),
-        animationDuration: Duration(milliseconds: 100),
       ),
     );
   }
