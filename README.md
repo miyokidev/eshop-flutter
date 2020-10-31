@@ -1,6 +1,6 @@
 # flutter_eshop_app
 
-A eShopping Flutter application.
+An eShopping Flutter application.
 
 ## Getting Started
 
