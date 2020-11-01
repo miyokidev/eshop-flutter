@@ -1,4 +1,4 @@
-# flutter_eshop_app
+# eshop-flutter
 
 An eShopping Flutter application.
 
