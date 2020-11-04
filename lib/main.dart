@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_eshop_app/views/device_preferences_view.dart';
-import 'package:flutter_eshop_app/views/home_view.dart';
+import 'package:flutter_eshop_app/views/pages/device_preferences_page.dart';
+import 'package:flutter_eshop_app/views/pages/home_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() => runApp(MaterialApp(
@@ -78,7 +78,7 @@ class _MyApp extends State<MyApp> {
             }
             if (snapshot.hasData) {
               print(snapshot.data);
-              return snapshot.data ? Home() : DevicePreferences();
+              return snapshot.data ? HomePage() : DevicePreferencesPage();
             }
 
             return Container();

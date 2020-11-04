@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_eshop_app/controllers/preferences_orientation.dart';
 
-class DevicePreferences extends StatelessWidget {
+class DevicePreferencesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

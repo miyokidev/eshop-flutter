@@ -53,6 +53,7 @@ class OrientationDeviceOptions extends StatelessWidget {
                     splashColor: Colors.transparent,
                     onTap: () {
                       print("Settings pressed " + data.size.height.toString());
+
                     },
                     child: Column(
                       children: [
