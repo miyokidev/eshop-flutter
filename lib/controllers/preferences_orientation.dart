@@ -14,6 +14,13 @@ class OrientationDeviceOptions extends StatelessWidget {
     return format.currencySymbol + " " + format.currencyName;
   }
 
+  String getCountryCode() {
+    var currentLoc = Platform.localeName;
+    var string = currentLoc.split("_");
+
+    return string[1];
+  }
+
   @override
   Widget build(BuildContext context) {
     final data = MediaQuery.of(context);
@@ -52,7 +59,7 @@ class OrientationDeviceOptions extends StatelessWidget {
                     highlightColor: Colors.transparent,
                     splashColor: Colors.transparent,
                     onTap: () {
-                      print("Settings pressed " + data.size.height.toString());
+                      print("Settings pressed ");
 
                     },
                     child: Column(
@@ -68,7 +75,7 @@ class OrientationDeviceOptions extends StatelessWidget {
                           padding: EdgeInsets.only(top: 10.0),
                         ),
                         Text(
-                          Platform.localeName + ", " + getCurrency(),
+                          getCountryCode() + ", " + getCurrency(),
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
