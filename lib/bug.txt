@@ -1,0 +1,16 @@
+When adb devices killing himself
+
+Unplug phone + close vscode and do:
+
+adb kill-server
+adb start-server
+
+If problems with the devplug do:
+
+lsusb
+sudo vi /etc/udev/rules.d/51-android.rules
+Change the idProduct by the id after the ":"
+
+then do:
+
+sudo udevadm control --reload-rules
