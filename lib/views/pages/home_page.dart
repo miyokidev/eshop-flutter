@@ -16,6 +16,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final data = MediaQuery.of(context);
     return Scaffold(
+      appBar: AppBar(
+        actions: [],
+        backgroundColor: Colors.red,
+        ),
       backgroundColor: Colors.red,
       body: Center(
         child: Text(
