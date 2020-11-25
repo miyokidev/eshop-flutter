@@ -78,7 +78,7 @@ class _MyApp extends State<MyApp> {
             }
             if (snapshot.hasData) {
               print(snapshot.data);
-              return snapshot.data ? HomePage() : DevicePreferencesPage();
+              return snapshot.data ? HomePage("Men") : DevicePreferencesPage();
             }
 
             return Container();

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_eshop_app/views/pages/home_page.dart';
 import 'package:intl/intl.dart';
 import 'dart:io';
+import 'package:flutter_eshop_app/models/screen_sizes.dart';
 
-const double OPP7ScreenWidth = 411.42857142857144;
-const double OPP7ScreenHeight = 835.4285714285714;
 
 class OrientationDeviceOptions extends StatelessWidget {
   String getCurrency() {
@@ -216,6 +216,13 @@ class Button extends StatelessWidget {
 
   Button(this.title, this.width, this.height);
 
+  void navigateToHome(BuildContext context, String gender) {
+    Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => HomePage(gender)),
+  );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (MediaQuery.of(context).orientation == Orientation.portrait) {
@@ -225,6 +232,7 @@ class Button extends StatelessWidget {
         child: RaisedButton(
           onPressed: () {
             print(title + " pressed");
+            navigateToHome(context, title);
           },
           color: Colors.redAccent[700],
           highlightColor: Colors.red[900],
