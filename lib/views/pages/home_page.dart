@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_eshop_app/models/screen_sizes.dart';
+import '../home_tabbar.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -15,21 +16,21 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final data = MediaQuery.of(context);
-    return Scaffold(
-      appBar: AppBar(
-        actions: [],
+    return DefaultTabController(
+      length: 2,
+          child: Scaffold(
+        appBar: EShopTabBar("Yo"),
         backgroundColor: Colors.red,
-        ),
-      backgroundColor: Colors.red,
-      body: Center(
-        child: Text(
-                  "Home " + widget.gender,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: data.size.width * 16 / OPP7ScreenWidth,
+        body: Center(
+          child: Text(
+                    "Home " + widget.gender,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: data.size.width * 16 / OPP7ScreenWidth,
+                    ),
                   ),
-                ),
+        ),
       ),
     );
   }

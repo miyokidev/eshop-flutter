@@ -217,10 +217,9 @@ class Button extends StatelessWidget {
   Button(this.title, this.width, this.height);
 
   void navigateToHome(BuildContext context, String gender) {
-    Navigator.push(
-    context,
+    Navigator.pushReplacement(context,
     MaterialPageRoute(builder: (context) => HomePage(gender)),
-  );
+    );
   }
 
   @override
