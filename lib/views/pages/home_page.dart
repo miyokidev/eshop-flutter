@@ -26,9 +26,9 @@ class _HomePageState extends State<HomePage> {
           data: Theme.of(context).copyWith(
             canvasColor: Colors.red,
             textTheme: TextTheme(
-              headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold, color: Colors.white),
-              headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic, color: Colors.white),
-              bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind', color: Colors.white),
+              headline1: TextStyle(fontSize: data.size.width * 72.0 / OPP7ScreenWidth, fontWeight: FontWeight.bold, color: Colors.white),
+              headline6: TextStyle(fontSize: data.size.width * 36.0 / OPP7ScreenWidth, fontStyle: FontStyle.italic, color: Colors.white),
+              bodyText2: TextStyle(fontSize: data.size.width * 14.0 / OPP7ScreenWidth, fontFamily: 'Hind', color: Colors.white),
             ),
             ),
           child: Drawer(
@@ -65,9 +65,19 @@ class _HomePageState extends State<HomePage> {
         appBar: PreferredSize(
       preferredSize: Size.fromHeight(kToolbarHeight),
       child: Container(
-        color: Colors.red,
+        decoration: BoxDecoration(
+          color: Colors.red,
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+                color: Colors.black54,
+                blurRadius: 15.0,
+                offset: Offset(0.0, 0.30)
+            )
+          ],
+      ),
         child: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(child: Container()),
               Row(

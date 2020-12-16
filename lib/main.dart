@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_eshop_app/views/pages/device_preferences_page.dart';
 import 'package:flutter_eshop_app/views/pages/home_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_eshop_app/models/screen_sizes.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -27,6 +28,7 @@ class _MyApp extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final data = MediaQuery.of(context);
     return Scaffold(
       backgroundColor: Colors.red,
       body: FutureBuilder(
@@ -48,7 +50,7 @@ class _MyApp extends State<MyApp> {
                             Text("eShop",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 64,
+                                    fontSize: data.size.width * 64 / OPP7ScreenWidth,
                                     color: Colors.white))
                           ],
                         )),
