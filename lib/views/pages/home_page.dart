@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
             BoxShadow(
                 color: Colors.black54,
                 blurRadius: 15.0,
-                offset: Offset(0.0, 0.30)
+                offset: Offset(0.0, 0.30),
             )
           ],
       ),
@@ -89,15 +89,30 @@ class _HomePageState extends State<HomePage> {
                       indicatorColor: Colors.white,
                       indicatorSize: TabBarIndicatorSize.label,
                       tabs: [
-                        Text("eS"),
-                        Icon(
-                          Icons.search
+                        Container(
+                          height: 30,
+                          child: Text("eS", style: TextStyle(fontSize: data.size.width * 12 / OPP7ScreenWidth))
                           ),
-                        Icon(
-                          Icons.favorite_border,
+                        Container(
+                          height: 40,
+                          child: Icon(
+                            Icons.search,
+                            size: 30,
+                            ),
                         ),
-                        Icon(
-                          Icons.shopping_cart_outlined
+                        Container(
+                          height: 40,
+                          child: Icon(
+                            Icons.favorite_border,
+                            size: 30,
+                          ),
+                        ),
+                        Container(
+                          height: 40,
+                          child: Icon(
+                            Icons.shopping_cart_outlined,
+                            size: 30,
+                          ),
                         ),
                       ],
                     ),
@@ -108,6 +123,7 @@ class _HomePageState extends State<HomePage> {
                   child: Icon(
                     Icons.person_pin,
                     color: Colors.white,
+                    size: 30,
                       ),
                 ),
                 ],
